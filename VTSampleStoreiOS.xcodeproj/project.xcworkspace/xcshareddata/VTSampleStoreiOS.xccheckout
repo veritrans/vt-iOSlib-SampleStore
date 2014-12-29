@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3992BF41-FDCB-4C54-AD18-EEE1B01B7C03</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VTSampleStoreiOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</key>
+		<string>https://github.com/muhammadanis/vtSampleStoreiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VTSampleStoreiOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/muhammadanis/vtSampleStoreiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VTSampleStoreiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

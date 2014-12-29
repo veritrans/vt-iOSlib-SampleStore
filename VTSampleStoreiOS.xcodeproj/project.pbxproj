@@ -24,6 +24,9 @@
 		DAA1CF3D1A4A4C7400490544 /* VTItemDetails.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF321A4A4C6700490544 /* VTItemDetails.h */; };
 		DAA1CF3E1A4A4C7400490544 /* VTToken.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF331A4A4C6700490544 /* VTToken.h */; };
 		DAA1CF3F1A4A4C7400490544 /* VTTransactionDetails.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF341A4A4C6700490544 /* VTTransactionDetails.h */; };
+		DAA505C41A512C8A00058CF9 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C31A512C8A00058CF9 /* ShopController.swift */; };
+		DAA505C71A513D1100058CF9 /* VTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C61A513D1100058CF9 /* VTItem.swift */; };
+		DAA505C91A51419200058CF9 /* VTCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C81A51419200058CF9 /* VTCheckout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		DAA1CF321A4A4C6700490544 /* VTItemDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTItemDetails.h; sourceTree = "<group>"; };
 		DAA1CF331A4A4C6700490544 /* VTToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTToken.h; sourceTree = "<group>"; };
 		DAA1CF341A4A4C6700490544 /* VTTransactionDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTTransactionDetails.h; sourceTree = "<group>"; };
+		DAA505C31A512C8A00058CF9 /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		DAA505C61A513D1100058CF9 /* VTItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTItem.swift; sourceTree = "<group>"; };
+		DAA505C81A51419200058CF9 /* VTCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTCheckout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +109,14 @@
 		DA9F52FE1A3ACB0300F1543D /* VTSampleStoreiOS */ = {
 			isa = PBXGroup;
 			children = (
+				DAA505C51A513CF500058CF9 /* Model */,
 				DA9F53011A3ACB0300F1543D /* AppDelegate.swift */,
 				DA9F53031A3ACB0300F1543D /* ViewController.swift */,
 				DA9F53051A3ACB0300F1543D /* Main.storyboard */,
 				DA9F53081A3ACB0300F1543D /* Images.xcassets */,
 				DA9F530A1A3ACB0300F1543D /* LaunchScreen.xib */,
 				DA9F52FF1A3ACB0300F1543D /* Supporting Files */,
+				DAA505C31A512C8A00058CF9 /* ShopController.swift */,
 			);
 			path = VTSampleStoreiOS;
 			sourceTree = "<group>";
@@ -154,6 +162,15 @@
 				DAA1CF341A4A4C6700490544 /* VTTransactionDetails.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		DAA505C51A513CF500058CF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAA505C61A513D1100058CF9 /* VTItem.swift */,
+				DAA505C81A51419200058CF9 /* VTCheckout.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +277,11 @@
 				DAA1CF361A4A4C7400490544 /* VTBaseTransaction.h in Sources */,
 				DAA1CF371A4A4C7400490544 /* VTBaseTransactionMethod.h in Sources */,
 				DAA1CF381A4A4C7400490544 /* VTCardDetails.h in Sources */,
+				DAA505C41A512C8A00058CF9 /* ShopController.swift in Sources */,
 				DAA1CF391A4A4C7400490544 /* VTConfig.h in Sources */,
+				DAA505C71A513D1100058CF9 /* VTItem.swift in Sources */,
 				DAA1CF3A1A4A4C7400490544 /* VTCustomerDetails.h in Sources */,
+				DAA505C91A51419200058CF9 /* VTCheckout.swift in Sources */,
 				DAA1CF3B1A4A4C7400490544 /* VTDirect.h in Sources */,
 				DAA1CF3D1A4A4C7400490544 /* VTItemDetails.h in Sources */,
 				DAA1CF3E1A4A4C7400490544 /* VTToken.h in Sources */,
