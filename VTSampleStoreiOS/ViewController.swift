@@ -8,63 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIWebViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    let CellIdentifier: String = "CellIdentifier"
+    
+    var cart : [VTItem : Int] = [:]
+    
+    var items : [VTItem] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        //load all vtitem
+        items.append(VTItem(id: 1, imageName: "motor1", name: "Ducati Course", price: 500000))
+        items.append(VTItem(id: 2, imageName: "motor2", name: "Nicky Hayden", price: 400000))
+        items.append(VTItem(id: 3, imageName: "motor3", name: "Mach 1", price: 300000))
         
-        VTConfig.setCLIENT_KEY("VT-client-3YUXFj6X0XBpeDgf")
-        VTConfig.setVT_IsProduction(false)
-        
-        
-        var vtDirect = VTDirect()
-        var cardDetails = VTCardDetails()
-        cardDetails.card_number = "4811111111111114"
-        cardDetails.card_cvv = "123"
-        cardDetails.card_exp_month = 1
-        cardDetails.card_exp_year = 2020;
-        cardDetails.secure = true
-        cardDetails.gross_amount = "10000"
-        
-        vtDirect.card_details = cardDetails
-        
-        vtDirect.getToken { (token:VTToken!, ex : NSException!) -> Void in
-            if(ex == nil){
-                println(token.token_id)
-                println(token.redirect_url)
-                if(token.redirect_url != nil){
-                    let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
-                    webView.loadRequest(NSURLRequest(URL: NSURL(string:token.redirect_url)!))
-                    webView.delegate = self
-                    self.view.addSubview(webView)
-                    
-                }
-                
-            }else{
-                println(ex.reason)
-            }
-        }
-    }
-    
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        println("should Url: \(request.URL.absoluteString)")
-        return true;
-    }
-    
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        println("WebView start with error \(error)")
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        if(webView.request?.URL.absoluteString?.rangeOfString("callback") != nil){
-            //remove webview from parent
-            //TODO: charge user and check whether transaction is success
-            webView.removeFromSuperview();
-        }
+        priceLabel.text = "Price: 0"
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +36,54 @@ class ViewController: UIViewController,UIWebViewDelegate{
         // Dispose of any resources that can be recreated.
         
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var row = indexPath.row
+        
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as UITableViewCell
+        
+        //set image
+        var itemImage : UIImageView? = cell.contentView.viewWithTag(1) as? UIImageView
+        if(itemImage != nil){
+            itemImage!.image = UIImage(named: "motor\(row+1)")
+        }
+        
+        //set item name
+        var label : UILabel? = cell.contentView.viewWithTag(2) as? UILabel
+        if(label != nil){
+            label!.text = items[row].name
+        }
+        
+        //set price
+        var labelPrice : UILabel? = cell.contentView.viewWithTag(3) as? UILabel
+        if(labelPrice != nil){
+            labelPrice!.text = "\(items[row].price)"
+        }
+        
+        var buyBtn : UIButton? = cell.contentView.viewWithTag(4) as? UIButton
+        if(buyBtn != nil){
+            println(row)
+            buyBtn!.tag = row
+        }
+        
+        return cell as UITableViewCell
+    }
+    
+    @IBAction func buyBtnClick(sender: AnyObject) {
+        println(sender.tag)
+    }
+
+    
+    
 
 
 }
