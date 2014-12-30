@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var cart : [VTItem : Int] = [:]
     
     var items : [VTItem] = []
+    
 
     
     override func viewDidLoad() {
@@ -97,11 +98,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
-    @IBAction func btnCheckoutClick(sender: AnyObject) {
-        println("checkout")
-        self.performSegueWithIdentifier("checkoutController", sender: self)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var checkoutController : CheckoutController = segue.destinationViewController as CheckoutController
+        var checkoutItems : [VTCheckout] = []
+        for(item,quantity) in cart{
+            checkoutItems.append(VTCheckout(item: item, quantity: quantity))
+        }
+        checkoutController.checkoutItems = checkoutItems
     }
-
+    
 
 }
 
