@@ -70,4 +70,8 @@ class ShopController : UITableViewController{
         println(sender.tag)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("test")
+    }
+    
 }

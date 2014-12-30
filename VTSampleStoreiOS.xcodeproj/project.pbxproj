@@ -13,6 +13,7 @@
 		DA9F53091A3ACB0300F1543D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9F53081A3ACB0300F1543D /* Images.xcassets */; };
 		DA9F530C1A3ACB0300F1543D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9F530A1A3ACB0300F1543D /* LaunchScreen.xib */; };
 		DA9F53181A3ACB0300F1543D /* VTSampleStoreiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F53171A3ACB0300F1543D /* VTSampleStoreiOSTests.swift */; };
+		DAA142871A52617B00213E62 /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA142861A52617B00213E62 /* CheckoutController.swift */; };
 		DAA1CF111A4A419100490544 /* libVTiOSAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1CF101A4A419100490544 /* libVTiOSAPI.a */; };
 		DAA1CF351A4A4C7400490544 /* VTAddress.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF2A1A4A4C6700490544 /* VTAddress.h */; };
 		DAA1CF361A4A4C7400490544 /* VTBaseTransaction.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF2B1A4A4C6700490544 /* VTBaseTransaction.h */; };
@@ -50,6 +51,7 @@
 		DA9F53111A3ACB0300F1543D /* VTSampleStoreiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTSampleStoreiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9F53161A3ACB0300F1543D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9F53171A3ACB0300F1543D /* VTSampleStoreiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTSampleStoreiOSTests.swift; sourceTree = "<group>"; };
+		DAA142861A52617B00213E62 /* CheckoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
 		DAA1CF101A4A419100490544 /* libVTiOSAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVTiOSAPI.a; path = lib/libVTiOSAPI.a; sourceTree = "<group>"; };
 		DAA1CF2A1A4A4C6700490544 /* VTAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTAddress.h; sourceTree = "<group>"; };
 		DAA1CF2B1A4A4C6700490544 /* VTBaseTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBaseTransaction.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				DA9F530A1A3ACB0300F1543D /* LaunchScreen.xib */,
 				DA9F52FF1A3ACB0300F1543D /* Supporting Files */,
 				DAA505C31A512C8A00058CF9 /* ShopController.swift */,
+				DAA142861A52617B00213E62 /* CheckoutController.swift */,
 			);
 			path = VTSampleStoreiOS;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				DAA1CF3D1A4A4C7400490544 /* VTItemDetails.h in Sources */,
 				DAA1CF3E1A4A4C7400490544 /* VTToken.h in Sources */,
 				DAA1CF3F1A4A4C7400490544 /* VTTransactionDetails.h in Sources */,
+				DAA142871A52617B00213E62 /* CheckoutController.swift in Sources */,
 				DA9F53041A3ACB0300F1543D /* ViewController.swift in Sources */,
 				DA9F53021A3ACB0300F1543D /* AppDelegate.swift in Sources */,
 			);

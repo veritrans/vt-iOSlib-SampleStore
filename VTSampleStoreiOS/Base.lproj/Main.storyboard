@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RAt-Wp-Jb8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -55,7 +55,7 @@
                                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="buyBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T9U-gj-jzu"/>
+                                                        <action selector="buyClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKH-AO-5x5"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -67,16 +67,49 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3ow-Su-thj"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqN-w4-VWJ">
+                                <rect key="frame" x="90" y="285" width="233" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Checkout">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCheckoutClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1we-yP-ygR"/>
+                                    <segue destination="oNN-oj-0cS" kind="show" identifier="checkoutController" id="c7J-ue-yQo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vmp-t6-6AV"/>
                     <connections>
                         <outlet property="priceLabel" destination="77h-oR-Skb" id="bn8-Aq-8Kc"/>
+                        <segue destination="Eh9-ho-QRQ" kind="show" identifier="showCheckout" id="5jB-gH-syY"/>
+                        <segue destination="Eh9-ho-QRQ" kind="show" identifier="showCheckout2" id="m0E-PZ-DVc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-181" y="-1444"/>
+            <point key="canvasLocation" x="599" y="-1996"/>
+        </scene>
+        <!--Checkout Controller-->
+        <scene sceneID="KDL-oP-XNd">
+            <objects>
+                <viewController id="oNN-oj-0cS" customClass="CheckoutController" customModule="VTSampleStoreiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJq-FF-TsG"/>
+                        <viewControllerLayoutGuide type="bottom" id="KOv-mA-CnT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wm3-ZH-Dyc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jB-GQ-nAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="-1462"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="3Kw-d3-T87">
@@ -131,5 +164,26 @@
             </objects>
             <point key="canvasLocation" x="-79" y="-700"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sOd-0Z-qVv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RAt-Wp-Jb8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nLh-Zl-C9v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Axq-s4-01i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57f-Vk-4AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213" y="-1996"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="m0E-PZ-DVc"/>
+    </inferredMetricsTieBreakers>
 </document>

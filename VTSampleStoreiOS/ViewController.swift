@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         items.append(VTItem(id: 2, imageName: "motor2", name: "Nicky Hayden", price: 400000))
         items.append(VTItem(id: 3, imageName: "motor3", name: "Mach 1", price: 300000))
         
-        priceLabel.text = "Price: 0"
+        priceLabel.text = "Total Price: 0"
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,19 +71,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var buyBtn : UIButton? = cell.contentView.viewWithTag(4) as? UIButton
         if(buyBtn != nil){
-            println(row)
             buyBtn!.tag = row
         }
         
         return cell as UITableViewCell
     }
     
-    @IBAction func buyBtnClick(sender: AnyObject) {
-        println(sender.tag)
+    
+    func updatePrice(){
+        var totalPrice : Int = 0
+        for(item,quantity) in cart{
+            totalPrice += item.price * quantity
+        }
+        priceLabel.text = "Total Price: \(totalPrice)"
     }
 
     
+    @IBAction func buyClicked(sender: AnyObject) {
+        let row:Int? = sender.tag;
+        println("clicked \(row!)")
+        if(row != nil){
+            cart[items[row!]] = cart[items[row!]] == nil ? 1 : cart[items[row!]]!+1
+            updatePrice()
+        }
+
+    }
     
+    @IBAction func btnCheckoutClick(sender: AnyObject) {
+        println("checkout")
+        self.performSegueWithIdentifier("checkoutController", sender: self)
+    }
 
 
 }
