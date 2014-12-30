@@ -105,7 +105,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-zY-Xnh">
                                 <rect key="frame" x="0.0" y="31" width="656" height="537"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="656" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="ufs-Ne-RAd">
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="656" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="vPh-wL-R3R">
                                     <rect key="frame" x="0.0" y="64" width="656" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -146,11 +146,36 @@
                                     <outlet property="delegate" destination="oNN-oj-0cS" id="gaG-vr-yoe"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="656" placeholderIntrinsicHeight="21" text="Pay With 3D Secure" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxh-cs-1AZ">
+                                <rect key="frame" x="30" y="240" width="656" height="43"/>
+                                <accessibility key="accessibilityConfiguration" label="Halokk"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdS-So-ztK">
+                                <rect key="frame" x="30" y="291" width="233" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pay">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="payBtnClikc:" destination="oNN-oj-0cS" eventType="touchUpInside" id="kHa-zy-gAS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Token:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umq-oW-9Ii">
+                                <rect key="frame" x="30" y="340" width="570" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="totalPriceLabel" destination="ufs-Ne-RAd" id="w0s-To-gyL"/>
+                        <outlet property="tokenLabel" destination="Umq-oW-9Ii" id="ljn-Id-jbY"/>
+                        <outlet property="totalPriceLabel" destination="vPh-wL-R3R" id="LD7-l3-sgh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jB-GQ-nAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
