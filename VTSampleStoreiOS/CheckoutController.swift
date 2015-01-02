@@ -90,10 +90,9 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
             var request = NSMutableURLRequest(URL: NSURL(string: "http://128.199.141.15:9091/index.php")!)
             var session = NSURLSession.sharedSession()
             request.HTTPMethod = "POST"
-            var params = ["token-id":"\(self.token!.token_id)","price":"\(totalPrice)"]
-            var errorPost : NSError?
-            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &errorPost)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            var bodyData = "token-id=\(self.token!.token_id)&price=\(totalPrice)"
+            
+            request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             
             var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
