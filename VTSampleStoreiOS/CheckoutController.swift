@@ -20,6 +20,8 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
     var checkoutItems : [VTCheckout] = []
     
     let CellIdentifier: String = "CellIdentifierCheckout"
+    
+    var token: VTToken? = nil
 
     
     override func viewDidLoad() {
@@ -55,6 +57,7 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
         vtDirect.getToken { (token:VTToken!, ex : NSException!) -> Void in
             if(ex == nil){
                 self.tokenLabel.text = "Token: \(token.token_id)"
+                self.token = token
                 if(token.redirect_url != nil){
                     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
                     webView.loadRequest(NSURLRequest(URL: NSURL(string:token.redirect_url)!))
@@ -83,27 +86,28 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
             //TODO: charge user and check whether transaction is success
             webView.removeFromSuperview();
             
-            //send token asynchronously to server
-            var url = "http://128.199.141.15:9091/index.php"
-            var request : NSMutableURLRequest = NSMutableURLRequest()
-            request.URL = NSURL(string: url)
-            request.HTTPMethod = "POST"
             
-            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler: { (response : NSURLResponse!, data:NSData!, error:NSError!) -> Void in
-                if error == nil {
-                    var err: NSError?
-                    let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-                    if err != nil{
-                        println("JSON Error: \(err!.localizedDescription)")
-                    }else{
-                        println(jsonResult)
-                    }
-                    
+            var request = NSMutableURLRequest(URL: NSURL(string: "http://128.199.141.15:9091/index.php")!)
+            var session = NSURLSession.sharedSession()
+            request.HTTPMethod = "POST"
+            var params = ["token-id":"\(self.token!.token_id)","price":"\(totalPrice)"]
+            var errorPost : NSError?
+            request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &errorPost)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            
+            var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+                if(error == nil){
+                    println("Response: \(response) data: \(data)")
+                    var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Body: \(strData!)")
                 }else{
                     println("Error: \(error.localizedDescription)")
                 }
                 
             })
+            task.resume()
+            
         }
     }
     
