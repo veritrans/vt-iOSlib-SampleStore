@@ -82,6 +82,28 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
             //remove webview from parent
             //TODO: charge user and check whether transaction is success
             webView.removeFromSuperview();
+            
+            //send token asynchronously to server
+            var url = "http://128.199.141.15:9091/index.php"
+            var request : NSMutableURLRequest = NSMutableURLRequest()
+            request.URL = NSURL(string: url)
+            request.HTTPMethod = "POST"
+            
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler: { (response : NSURLResponse!, data:NSData!, error:NSError!) -> Void in
+                if error == nil {
+                    var err: NSError?
+                    let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+                    if err != nil{
+                        println("JSON Error: \(err!.localizedDescription)")
+                    }else{
+                        println(jsonResult)
+                    }
+                    
+                }else{
+                    println("Error: \(error.localizedDescription)")
+                }
+                
+            })
         }
     }
     
