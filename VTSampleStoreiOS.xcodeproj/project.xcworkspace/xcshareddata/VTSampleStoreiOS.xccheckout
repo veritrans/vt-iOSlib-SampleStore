@@ -12,6 +12,8 @@
 	<dict>
 		<key>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</key>
 		<string>https://github.com/muhammadanis/vtSampleStoreiOS.git</string>
+		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
+		<string>https://github.com/lingoer/SwiftyJSON.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>VTSampleStoreiOS.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</key>
 		<string>../..</string>
+		<key>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</key>
+		<string>../../../SwiftyJSON</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/muhammadanis/vtSampleStoreiOS.git</string>
@@ -28,6 +32,14 @@
 	<string>38FA503FA57B1AAB5E9B8A5A0D6EC671AC8DA675</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftyJSON</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

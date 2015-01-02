@@ -97,9 +97,22 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
             
             var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
                 if(error == nil){
-                    println("Response: \(response) data: \(data)")
                     var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
                     println("Body: \(strData!)")
+                    let json = JSON(data:data)
+                    if let success = json["status"].stringValue{
+                        if(success == "success"){
+                            let trxId = json["body"]["transaction_id"]
+                            println("Success to Charging data with transaction id\(trxId)")
+                        }else{
+                            println("Failed to Charge")
+                        }
+                        
+                    }else{
+                        var errorS = json["status"]
+                        println("error: \(errorS)")
+                    }
+                    
                 }else{
                     println("Error: \(error.localizedDescription)")
                 }
