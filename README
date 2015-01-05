@@ -7,4 +7,22 @@ HOW TO IMPORT LIBRARY
 
 1. Import libVTiOSAPI.a
 
+- Create a swift project from XCode
+- Create a folder named 'lib' under your root project folder (this is optional, you could always put it elsewhere)
+- Copy libVTiOSAPI.a to previously created 'lib' folder
+- Open XCode and click on project structure
+- Choose 'Build Phases'
+- Under 'Link Binary With Libraries' click the '+' symbol and choose 'add other'
+- Browse to previously create 'lib' folder and choose libVTiOSAPI.a, it should add libVTiOSAPI.a under your tree project
+
 2. Create Bridging-Header file
+
+
+- Copy 'include' folder from 'bin' folder to your root project folder
+- Click on project structure
+- Choose 'Build Settings'
+- Search for 'Objective-C Bridging Header' under 'Swift Compiler - Code Generation'
+- Double click on input on the right side, and put '$SOURCE_ROOT/include/VTiOSAPI-Bridging-Header.h' (make sure 'include' folder is inside your root project)
+- Now you can use VTiOSApi in your project. If you need any examples, please refer to this sample.
+
+All 'include' and 'lib' files can be found in 'bin' folder
