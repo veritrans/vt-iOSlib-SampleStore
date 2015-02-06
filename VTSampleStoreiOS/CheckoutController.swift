@@ -59,7 +59,7 @@ class CheckoutController : UIViewController, UITableViewDataSource, UITableViewD
                 self.tokenLabel.text = "Token: \(token.token_id)"
                 self.token = token
                 if(token.redirect_url != nil){
-                    let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
+                    let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, 400, 420))
                     webView.loadRequest(NSURLRequest(URL: NSURL(string:token.redirect_url)!))
                     webView.delegate = self
                     self.view.addSubview(webView)

@@ -14,7 +14,6 @@
 		DA9F530C1A3ACB0300F1543D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9F530A1A3ACB0300F1543D /* LaunchScreen.xib */; };
 		DA9F53181A3ACB0300F1543D /* VTSampleStoreiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9F53171A3ACB0300F1543D /* VTSampleStoreiOSTests.swift */; };
 		DAA142871A52617B00213E62 /* CheckoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA142861A52617B00213E62 /* CheckoutController.swift */; };
-		DAA1CF111A4A419100490544 /* libVTiOSAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA1CF101A4A419100490544 /* libVTiOSAPI.a */; };
 		DAA1CF351A4A4C7400490544 /* VTAddress.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF2A1A4A4C6700490544 /* VTAddress.h */; };
 		DAA1CF361A4A4C7400490544 /* VTBaseTransaction.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF2B1A4A4C6700490544 /* VTBaseTransaction.h */; };
 		DAA1CF371A4A4C7400490544 /* VTBaseTransactionMethod.h in Sources */ = {isa = PBXBuildFile; fileRef = DAA1CF2C1A4A4C6700490544 /* VTBaseTransactionMethod.h */; };
@@ -29,6 +28,7 @@
 		DAA505C41A512C8A00058CF9 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C31A512C8A00058CF9 /* ShopController.swift */; };
 		DAA505C71A513D1100058CF9 /* VTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C61A513D1100058CF9 /* VTItem.swift */; };
 		DAA505C91A51419200058CF9 /* VTCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C81A51419200058CF9 /* VTCheckout.swift */; };
+		DAA64F211A5F80AF0061AC30 /* libVTiOSAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA64F201A5F80AF0061AC30 /* libVTiOSAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,6 @@
 		DA9F53161A3ACB0300F1543D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9F53171A3ACB0300F1543D /* VTSampleStoreiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTSampleStoreiOSTests.swift; sourceTree = "<group>"; };
 		DAA142861A52617B00213E62 /* CheckoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutController.swift; sourceTree = "<group>"; };
-		DAA1CF101A4A419100490544 /* libVTiOSAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVTiOSAPI.a; path = lib/libVTiOSAPI.a; sourceTree = "<group>"; };
 		DAA1CF2A1A4A4C6700490544 /* VTAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTAddress.h; sourceTree = "<group>"; };
 		DAA1CF2B1A4A4C6700490544 /* VTBaseTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBaseTransaction.h; sourceTree = "<group>"; };
 		DAA1CF2C1A4A4C6700490544 /* VTBaseTransactionMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBaseTransactionMethod.h; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		DAA505C31A512C8A00058CF9 /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
 		DAA505C61A513D1100058CF9 /* VTItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTItem.swift; sourceTree = "<group>"; };
 		DAA505C81A51419200058CF9 /* VTCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTCheckout.swift; sourceTree = "<group>"; };
+		DAA64F201A5F80AF0061AC30 /* libVTiOSAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVTiOSAPI.a; path = lib/libVTiOSAPI.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA1CF111A4A419100490544 /* libVTiOSAPI.a in Frameworks */,
+				DAA64F211A5F80AF0061AC30 /* libVTiOSAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +93,8 @@
 		DA9F52F31A3ACB0300F1543D = {
 			isa = PBXGroup;
 			children = (
+				DAA64F201A5F80AF0061AC30 /* libVTiOSAPI.a */,
 				DAA1CF291A4A4C6700490544 /* include */,
-				DAA1CF101A4A419100490544 /* libVTiOSAPI.a */,
 				DA9F52FE1A3ACB0300F1543D /* VTSampleStoreiOS */,
 				DA9F53141A3ACB0300F1543D /* VTSampleStoreiOSTests */,
 				DA9F52FD1A3ACB0300F1543D /* Products */,
@@ -228,6 +228,7 @@
 				TargetAttributes = {
 					DA9F52FB1A3ACB0300F1543D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = G92YEQF267;
 					};
 					DA9F53101A3ACB0300F1543D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -422,6 +423,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VTSampleStoreiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -429,6 +432,7 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$SOURCE_ROOT/include/VTiOSAPI-Bridging-Header.h";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = $SOURCE_ROOT/include;
 			};
@@ -438,6 +442,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VTSampleStoreiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -445,6 +451,7 @@
 					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$SOURCE_ROOT/include/VTiOSAPI-Bridging-Header.h";
 			};
 			name = Release;
