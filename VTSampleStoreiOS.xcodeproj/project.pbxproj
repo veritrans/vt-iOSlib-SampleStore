@@ -28,7 +28,7 @@
 		DAA505C41A512C8A00058CF9 /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C31A512C8A00058CF9 /* ShopController.swift */; };
 		DAA505C71A513D1100058CF9 /* VTItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C61A513D1100058CF9 /* VTItem.swift */; };
 		DAA505C91A51419200058CF9 /* VTCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA505C81A51419200058CF9 /* VTCheckout.swift */; };
-		DAA64F211A5F80AF0061AC30 /* libVTiOSAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA64F201A5F80AF0061AC30 /* libVTiOSAPI.a */; };
+		DAFDFBE61A8886B0003972C0 /* libVTiOSAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAA64F201A5F80AF0061AC30 /* libVTiOSAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA64F211A5F80AF0061AC30 /* libVTiOSAPI.a in Frameworks */,
+				DAFDFBE61A8886B0003972C0 /* libVTiOSAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
