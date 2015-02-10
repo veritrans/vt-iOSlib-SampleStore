@@ -1,23 +1,18 @@
 HOW TO IMPORT LIBRARY
 
 1. Import libVTiOSAPI.a
-
-- Create a swift project from XCode
-- Create a folder named 'lib' under your root project folder (this is optional, you could always put it elsewhere)
-- Copy libVTiOSAPI.a to previously created 'lib' folder
-- Open XCode and click on project structure
-- Choose 'Build Phases'
-- Under 'Link Binary With Libraries' click the '+' symbol and choose 'add other'
-- Browse to previously create 'lib' folder and choose libVTiOSAPI.a, it should add libVTiOSAPI.a under your tree project
-
+   - Download our latest release libVTiOSAPI.a from our github (https://github.com/muhammadanis/vtiOSLib/releases)
+   - Create a folder named ‘lib’ under your root project folder (this is optional, you can always name your folder for something else)
+   - Copy libVTiOSAPI.a to previously created ‘lib’ folder
+   - Click your project from ‘Project Structure’ in XCode
+   - Choose ‘Build Phases’
+   - Under ‘Link Binary with Libraries’ click the ‘+’ symbol and choose ‘add other’
+   - Browse to previously created ‘lib’ folder and choose libVTiOSAPI.a. Then XCode will add it under your tree project
 2. Create Bridging-Header file
-
-
-- Copy 'include' folder from 'bin' folder to your root project folder
-- Click on project structure
-- Choose 'Build Settings'
-- Search for 'Objective-C Bridging Header' under 'Swift Compiler - Code Generation'
-- Double click on input on the right side, and put '$SOURCE_ROOT/include/VTiOSAPI-Bridging-Header.h' (make sure 'include' folder is inside your root project)
-- Now you can use VTiOSApi in your project. If you need any examples, please refer to this sample.
-
-All 'include' and 'lib' files can be found in 'bin' folder
+   - Copy ‘include’ folder from our release to your root project folder
+   - Drag your ‘include’ folder from finder into your XCode Project Structure
+   - Click on ‘Project Structure’ and choose ‘Build Settings’ tab
+   - Search for ‘Objective-C Bridging Header’ under ‘Swift Compiler - Code Generation’
+   - Double click on input on the right side, and put ‘$SOURCE_ROOT/include/VTiOSAPI-Bridging-Header.h‘ (make sure ‘include’ folder is inside your root project’)
+   - Now you can use VTiOSAPI in your project.
+NB: All files is available in our latest release
