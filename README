@@ -1,7 +1,7 @@
 HOW TO IMPORT LIBRARY
 
 1. Import libVTiOSAPI.a
-   - Download our latest release libVTiOSAPI.a from our github (https://github.com/muhammadanis/vtiOSLib/releases)
+   - Download our latest release libVTiOSAPI.a from our github (https://github.com/veritrans/vt-iOSlib-SampleStore/releases)
    - Create a folder named ‘lib’ under your root project folder (this is optional, you can always name your folder for something else)
    - Copy libVTiOSAPI.a to previously created ‘lib’ folder
    - Click your project from ‘Project Structure’ in XCode
